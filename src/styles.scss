@@ -1,0 +1,42 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Nunito Sans, sans-serif, Roboto;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+  
+
+mat-sidenav {
+  background: #2962ff !important;
+  color: white !important;
+}
+
+#left-side-nav a.hl-active {
+  color: #000 !important;
+}
+
+.mat-icon-button{
+  outline: none !important;
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgb(223, 219, 219);
+}
+
+// To fix mdbootstrap button uppercase
+.btn {
+    text-transform: none !important;
+}
+
+.left-spacer {
+  flex: 1 1 auto;
+}
+
+

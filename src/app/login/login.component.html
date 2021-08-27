@@ -1,0 +1,55 @@
+<div class="offset-sm-2 col-sm-9 container">
+    <form>
+        <div class="text-center">
+            <div class="divider d-flex align-items-center my-4">
+                <h2 class="text-center fw-bold mx-3 mb-0"> Login </h2>
+            </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="mb-4">
+            <input type="email" mdbInput id="form3Example3" class="form-control" placeholder="Enter email address" />
+        </div>
+
+        <!-- Password input -->
+        <div class="mb-3">
+            <input type="password" mdbInput id="form3Example4" class="form-control" placeholder="Enter password" />
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                    Remember me
+                </label>
+            </div>
+            <a href="#!">Forgot password?</a>
+        </div>
+
+        <div class="row justify-content-center py-4">
+            <button mdbBtn type="submit" color="default" class="col rounded-pill"> Login </button>
+        </div>
+
+        <!-- Sing Up -->
+        <div class="text-center text-lg-start pt-2">
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
+                <a routerLink="/singup" class="link-danger">Register</a>
+            </p>
+        </div>
+
+    </form>
+
+    <!-- Google SSO -->
+    <div>
+        <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+        </div>
+
+        <div class="row">
+            <button mdbBtn type="button" class="col rounded-pill">
+                <img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign In Using
+                Google </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<section class="vh-100 p-3">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+
+            <!-- Left Half -->
+            <div class="col-sm col-xs">
+                <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png"
+                    class="img-fluid" alt="Sample image">
+            </div>
+
+            <!-- Right Half -->
+            <div class="col-sm col-xs">
+
+                <div *ngIf="isLoginRoute; then loginBlock else signinBlock"></div>
+                <ng-template #loginBlock>
+                    <app-login></app-login>
+                </ng-template>
+                <ng-template #signinBlock>
+                    <app-sing-up-form></app-sing-up-form>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <!-- <div class="p-3 text-center bg-primary">
+        <div class="text-white mb-3 mb-md-0">
+            <div class=""> Copyright © 2021. All rights reserved. </div>
+        </div>
+    </div> -->
+</section>

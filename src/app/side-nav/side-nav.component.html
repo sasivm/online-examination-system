@@ -1,0 +1,22 @@
+<mat-nav-list id="left-side-nav">
+    <p mat-list-item class="text-center py-4">
+        {{userName}}
+    </p>
+
+    <a mat-list-item routerLink="/dashboard" routerLinkActive="hl-active">
+        <mdb-icon fas icon="th" class="px-2"> </mdb-icon> Dashboard
+    </a>
+    <a mat-list-item routerLink="/profile" routerLinkActive="hl-active">
+        <mdb-icon fas icon="user-circle" class="px-2"> </mdb-icon> Profile
+    </a>
+    <a mat-list-item routerLink="/courses" routerLinkActive="hl-active">
+        <mdb-icon fas icon="book" class="px-2"> </mdb-icon> Courses
+    </a>
+    <a mat-list-item routerLink="/events" routerLinkActive="hl-active">
+        <mdb-icon fas icon="calendar-alt" class="px-2"> </mdb-icon> Upcoming Event
+    </a>
+    <a mat-list-item routerLink="/leaderboard" routerLinkActive="hl-active">
+        <mdb-icon fas icon="chart-bar" class="px-2"> </mdb-icon> Leader Board
+    </a>
+
+</mat-nav-list>
