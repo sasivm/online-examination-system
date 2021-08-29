@@ -20,8 +20,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+
+// to resize left and right view in test module
+import { ResizableDirective } from './test-portal/resizable.directive'; 
+
 import { CourseDetailsComponent } from './courses/course-details/course-details.component';
 import { UploadQuesComponent } from './upload-ques/upload-ques.component';
+import { ToolBarComponent } from './home/tool-bar/tool-bar.component';
+import { AccountInfoComponent } from './profile/account-info/account-info.component';
+import { LeftViewComponent } from './test-portal/left-view/left-view.component';
+import { RightViewComponent } from './test-portal/right-view/right-view.component';
 
 
 @NgModule({
@@ -34,6 +42,11 @@ import { UploadQuesComponent } from './upload-ques/upload-ques.component';
     HomeComponent,
     CourseDetailsComponent,
     UploadQuesComponent,
+    ToolBarComponent,
+    AccountInfoComponent,
+    LeftViewComponent,
+    RightViewComponent,
+    ResizableDirective
   ],
   imports: [
     BrowserModule,

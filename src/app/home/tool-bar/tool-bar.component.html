@@ -1,0 +1,42 @@
+<mat-toolbar color="warn" class="row toolbar">
+
+    <button mat-icon-button (click)="navbarRef.toggle()">
+        <mat-icon> menu </mat-icon>
+    </button>
+
+    <span class="px-3">
+        <h2 class="title"> <b> {{app_title}} </b> </h2>
+    </span>
+
+
+    <!-- <span class="left-spacer"></span> Moves content to end -->
+
+    <div class="ml-auto px-3">
+        <mat-nav-list>
+            <mat-icon id="user-icon"> account_circle </mat-icon>
+        </mat-nav-list>
+    </div>
+</mat-toolbar>
+
+
+
+
+<!-- <mat-toolbar color="warn" class="toolbar">
+    <button mat-icon-button class="" (click)="navbarRef.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="px-3">
+        <h2 class="title"> <b> {{app_title}} </b> </h2>
+    </span> -->
+
+<!-- <span class="left-spacer"></span> Moves content to end -->
+
+<!-- <div>
+        <button mat-icon-button>
+            <p>
+                <mat-icon> account_circle </mat-icon> {{user_info.name || null}}
+            </p>
+        </button>
+    </div>
+</mat-toolbar> -->

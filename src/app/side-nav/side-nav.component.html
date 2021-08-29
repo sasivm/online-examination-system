@@ -1,12 +1,18 @@
 <mat-nav-list id="left-side-nav">
-    <h3 mat-list-item class="text-center py-4">
-        {{userName}}
-    </h3>
+    <div class="row justify-content-around">
+        <h3 mat-list-item class="py-3">
+            {{userName}}
+        </h3>
+
+        <mat-nav-list (click)="navbarRef.close()">
+            <mat-icon class="left-navlist-xs-close"> close </mat-icon>
+        </mat-nav-list>
+    </div>
 
     <ng-container *ngFor="let item of navListItems">
-        <mat-nav-list class="px-2">
-            <a mat-list-item [routerLink]="item.link" routerLinkActive="hl-active">
-                <mat-icon> {{item.icon}} </mat-icon> {{item.scrName}}
+        <mat-nav-list (click)="navbarRef.close()">
+            <a mat-list-item class="left-navlist-xs" [routerLink]="item.link" routerLinkActive="hl-active">
+                <mat-icon> {{item.icon}} </mat-icon> <span class="px-3"> {{item.scrName}} </span>
             </a>
         </mat-nav-list>
     </ng-container>

@@ -1,14 +1,26 @@
+$bg-nav-bar: #26286c;
+$bg-active-list: #ffffff;
+$list-color: #333;
+
+@mixin active-list {
+    background-color: $bg-active-list !important;
+    color: $list-color !important;
+}
 
 .hl-active {
-    background-color: #ffffff !important;
-    color: #333 !important;
+    @include active-list();
 }
 
 #left-side-nav a.hl-active {
-    color: #000 !important;
+    @include active-list();
 }
 
-mat-nav-list a:hover {
+.mat-nav-list a:hover {
     color: #ffffff !important;
+    background-color: $bg-nav-bar !important;
+    cursor: pointer;
+}
+
+.left-navlist-xs-close {
     cursor: pointer;
 }

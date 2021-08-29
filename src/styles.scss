@@ -1,51 +1,130 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
-$success: #6c757d;
-/* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
-body { 
+
+@mixin round-fond {
+  font-family: "Varela Round", Roboto, sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+p {
+  @include round-fond();
+  font-size: 1rem !important;
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  @include round-fond();
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 6px 0 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 6px 0 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+ul {
   margin: 0;
-  font-size: 12px;
-  font-family: Roboto,sans-serif !important;
-  font-variant: tabular-nums;
-  line-height: 1.5715;
+  padding: 0 0 0 1em;
+}
+
+li {
+  line-height: 24px;
+}
+
+label {
+  @include round-fond();
+  font-size: 1.2em !important;
+}
+
+.title {
+  @include round-fond();
+  font-size: 2em !important;
+}
+
+$bg-body: rgb(242, 244, 249);
+$bg-side-nav: rgb(11, 14, 102);
+$bg-toolbar: rgb(255, 150, 31);
+
+// For change border color of input
+$input-bg: rgb(83, 51, 237);
+$input-shadow: rgb(83, 51, 237) 0px 0px 0px 1px;
+$input-trans: all 0.3s ease 0s;
+
+@mixin input-border-theme {
+  border-color: $input-bg !important;
+  box-shadow: $input-shadow;
+  outline: none;
+  transition: $input-trans;
+}
+// For primary buttons
+$btn-primary-bg: #2bbbad;
+$btn-primary-color: #ffffff;
+$btn-primary-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+@mixin btn-primary-theme {
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+  box-shadow: $btn-primary-shadow;
+}
+
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  @include round-fond();
+  height: 100%;
+}
+
+.mat-typography {
+  font-family: "Varela Round", Roboto, sans-serif !important;
 }
 
 #main-content {
-	background-color: rgb(242, 244, 249) !important;
+  background-color: $bg-body !important;
 }
 
 #login-right-content {
-  background-color: $success;
+  background-color: $bg-body;
 }
 
 .toolbar {
-  background-color: rgb(255, 150, 31) !important;
+  background-color: $bg-toolbar !important;
 }
 
 mat-sidenav {
-  background-color: rgb(11, 14, 102) !important;
+  background-color: $bg-side-nav !important;
   color: rgb(255, 255, 255) !important;
 }
 
-.mat-list-item {
-  color: #d8d4d4 !important;
+#left-side-nav mat-nav-list a {
+  @include round-fond();
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  font-size: 1.1em !important;
 }
 
-.mat-icon-button{
+#left-side-nav .mat-list-item {
+  color: #cec5c5 !important;
+}
+
+.mat-icon-button {
   outline: none !important;
 }
 
 .form-control:focus {
-  border-color: rgb(83, 51, 237);
-  box-shadow: rgb(83, 51, 237) 0px 0px 0px 1px;
-  outline: none;
-  transition: all 0.3s ease 0s;
+  @include input-border-theme();
 }
 
-.btn-login, .btn-signup {
-	background-color: #2bbbad!important;
-  color: #fff;
-	box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+.btn-login,
+.btn-signup {
+  @include btn-primary-theme();
 }
 
 .divider:after,
@@ -58,9 +137,40 @@ mat-sidenav {
 
 // To fix mdbootstrap button uppercase
 .btn {
-    text-transform: none !important;
+  text-transform: none !important;
 }
 
 .left-spacer {
   flex: 1 1 auto;
+}
+
+
+// For mobile devices
+@media (max-width: 978px) {
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    padding: 0 !important;
+  }
+
+  #user-profile-container {
+    // border-bottom: 1px solid #000;
+  }
+
+  .left-navlist-xs {
+    padding-left: 6vw !important;
+  }
+
+  .left-navlist-xs-close {
+    // padding-right: 0px !important;
+    font-size: 3rem !important;
+  }
 }

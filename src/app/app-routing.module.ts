@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LeftTempComponent } from './login/left-temp/left-temp.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CoursesComponent } from './courses/courses.component';
+import { TestPortalComponent } from './test-portal/test-portal.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/login', pathMatch: 'full' }, to view working scr
@@ -12,7 +13,9 @@ const routes: Routes = [
   { path: 'singup', component: LeftTempComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'courses', component: CoursesComponent }
+  { path: 'courses', component: CoursesComponent },
+  { path: 'test', component: TestPortalComponent }
+
   // { path: '**', component: LeftTempComponent }
 ];
 
@@ -24,5 +27,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   LeftTempComponent, LeftTempComponent, ProfileComponent, DashboardComponent,
-  CoursesComponent
+  CoursesComponent, TestPortalComponent
 ];

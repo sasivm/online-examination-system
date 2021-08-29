@@ -1,0 +1,25 @@
+<p>test-portal works!</p>
+
+<div class="main p-5">
+    <div class="d-flex flex-column flex-sm-row">
+        <ng-container *ngIf="isSmallDevice; then mobileTemplate; else desktopTemplate"></ng-container>
+
+        <ng-template #mobileTemplate>
+            <div class="flex-fill p-5 left">
+                <app-left-view></app-left-view>
+            </div>
+            <div class="flex-fill p-5 right">
+                <app-right-view></app-right-view>
+            </div>
+        </ng-template>
+
+        <ng-template #desktopTemplate>
+            <div [resizableMinWidth]="10" appResizable class="flex-fill p-5 left">
+                <app-left-view></app-left-view>
+            </div>
+            <div class="flex-fill p-5 right">
+                <app-right-view></app-right-view>
+            </div>
+        </ng-template>
+    </div>
+</div>

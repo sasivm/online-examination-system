@@ -4,18 +4,18 @@
   <label for="form2">Example label</label>
 </div> -->
 
-<div class="col-sm col-xs container py-4">
-  <form>
-    <div>
-      <div class="divider d-flex align-items-center py-4">
-        <h2 class="text-center fw-bold mx-3 mb-0"> Register </h2>
-      </div>
-
-      <p class="text-center">Create your account. It's free and only takes a minute.</p>
+<div class="col-sm col-xs container">
+  <div class="text-center">
+    <div class="divider d-flex align-items-center py-4">
+      <h2 class="text-center fw-bold mx-3 mb-0"> Register </h2>
     </div>
 
+    <p class="text-center">Create your account. It's free and only takes a minute.</p>
+  </div>
+
+  <form class="py-4">
     <div id="singup-form-container" class="py-4">
-      <div class="form-group">
+      <div class="form-group py-2">
         <div class="row">
           <div class="col">
             <input type="text" class="form-control" id="first_name" placeholder="First Name">
@@ -26,15 +26,15 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group py-2">
         <input type="email" class="form-control" id="email" placeholder="Email">
       </div>
 
-      <div class="form-group">
+      <div class="form-group py-2">
         <input type="password" class="form-control" id="password" placeholder="Password">
       </div>
 
-      <div class="form-group">
+      <div class="form-group py-2">
         <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
       </div>
 
@@ -45,7 +45,7 @@
         </label>
       </div>
 
-      <div class="row justify-content-center py-4">
+      <div class="row justify-content-center pt-4">
         <button mat-raised-button type="submit" class="col-8 btn-signup rounded-pill p-1"> Register Now </button>
       </div>
     </div>

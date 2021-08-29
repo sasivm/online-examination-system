@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-left-temp',
@@ -10,12 +10,17 @@ export class LeftTempComponent implements OnInit {
 
   isLoginRoute: boolean = false;
 
-  constructor(private location: Location) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        console.log('starts',);
+        const currentURL = event.url;
+        this.isLoginRoute = (currentURL !== '/singup');
+      }
+    });
+  }
 
   ngOnInit(): void {
-    const curRoute = this.location.path();
-        
-    this.isLoginRoute = (curRoute !== '/singup');
   }
 
 }
