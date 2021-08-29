@@ -1,13 +1,14 @@
-.mat-list-item {
-    color: #000 !important;
-}
 
 .hl-active {
-    background-color: #fff !important;
+    background-color: #ffffff !important;
     color: #333 !important;
 }
 
+#left-side-nav a.hl-active {
+    color: #000 !important;
+}
+
 mat-nav-list a:hover {
-    color: #fff !important;
+    color: #ffffff !important;
     cursor: pointer;
 }

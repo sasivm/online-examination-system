@@ -1,24 +1,22 @@
-<section class="vh-100 p-3">
-    <div class="container-fluid h-custom">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+<div class="container-fluid vh-100">
+    <div class="row d-flex justify-content-center align-self-center">
 
-            <!-- Left Half -->
-            <div class="col-sm col-xs">
-                <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png"
-                    class="img-fluid" alt="Sample image">
-            </div>
+        <!-- Left Half -->
+        <div class="col-sm-7 col-xs border-right">
+            <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid"
+                alt="Sample image">
+        </div>
 
-            <!-- Right Half -->
-            <div class="col-sm col-xs">
+        <!-- Right Half -->
+        <div id="login-right-content" class="col-sm col-xs">
 
-                <div *ngIf="isLoginRoute; then loginBlock else signinBlock"></div>
-                <ng-template #loginBlock>
-                    <app-login></app-login>
-                </ng-template>
-                <ng-template #signinBlock>
-                    <app-sing-up-form></app-sing-up-form>
-                </ng-template>
-            </div>
+            <div *ngIf="isLoginRoute; then loginBlock else signinBlock"></div>
+            <ng-template #loginBlock>
+                <app-login></app-login>
+            </ng-template>
+            <ng-template #signinBlock>
+                <app-sing-up-form></app-sing-up-form>
+            </ng-template>
         </div>
     </div>
 
@@ -28,4 +26,4 @@
             <div class=""> Copyright © 2021. All rights reserved. </div>
         </div>
     </div> -->
-</section>
+</div>

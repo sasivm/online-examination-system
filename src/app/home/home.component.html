@@ -1,37 +1,38 @@
 <div class="container-fluid">
     <mat-sidenav-container class="vh-100 row">
         <!-- Side Nav -->
-        <mat-sidenav #lefSideNav mode="side" class="col-2 mx-0 px-0">
+        <mat-sidenav #lefSideNav opened mode="side" class="col-2 mx-0 px-0">
             <app-side-nav></app-side-nav>
         </mat-sidenav>
 
         <!-- Main content -->
-        <mat-sidenav-content style="background: rgb(99, 39, 120) !important;">
+        <mat-sidenav-content id="main-content">
             <!-- Tool bar -->
-            <mat-toolbar color="warn">
-                <button mat-icon-button (click)="lefSideNav.toggle()">
+            <mat-toolbar color="warn" class="toolbar">
+                <button mat-icon-button class="d-sm-none" (click)="lefSideNav.toggle()">
                     <mat-icon>menu</mat-icon>
                 </button>
 
                 <span class="px-3">
-                    Speedy Exam
+                    <h2> {{app_title}} </h2>
                 </span>
 
                 <span class="left-spacer"></span> <!-- Moves content to end -->
 
                 <div id="bar-content-end">
-                    <button mat-icon-button class="">
-                        <mdb-icon fas icon="user-circle" class=""> </mdb-icon> Sasi
+                    <button mat-icon-button>
+                        <mat-icon> user-circle </mat-icon> {{user_info.name || null}}
                     </button>
                 </div>
             </mat-toolbar>
 
-
-            <router-outlet></router-outlet>
+            <div id="main-content-body" class="p-4">
+                <router-outlet></router-outlet>
+            </div>
             <!-- <app-dashboard></app-dashboard> -->
             <!-- <app-profile></app-profile> -->
-            <app-upload-ques></app-upload-ques>
-            
+            <!-- <app-upload-ques></app-upload-ques> -->
+
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

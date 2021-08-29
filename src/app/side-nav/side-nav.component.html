@@ -1,22 +1,14 @@
 <mat-nav-list id="left-side-nav">
-    <p mat-list-item class="text-center py-4">
+    <h3 mat-list-item class="text-center py-4">
         {{userName}}
-    </p>
+    </h3>
 
-    <a mat-list-item routerLink="/dashboard" routerLinkActive="hl-active">
-        <mdb-icon fas icon="th" class="px-2"> </mdb-icon> Dashboard
-    </a>
-    <a mat-list-item routerLink="/profile" routerLinkActive="hl-active">
-        <mdb-icon fas icon="user-circle" class="px-2"> </mdb-icon> Profile
-    </a>
-    <a mat-list-item routerLink="/courses" routerLinkActive="hl-active">
-        <mdb-icon fas icon="book" class="px-2"> </mdb-icon> Courses
-    </a>
-    <a mat-list-item routerLink="/events" routerLinkActive="hl-active">
-        <mdb-icon fas icon="calendar-alt" class="px-2"> </mdb-icon> Upcoming Event
-    </a>
-    <a mat-list-item routerLink="/leaderboard" routerLinkActive="hl-active">
-        <mdb-icon fas icon="chart-bar" class="px-2"> </mdb-icon> Leader Board
-    </a>
+    <ng-container *ngFor="let item of navListItems">
+        <mat-nav-list class="px-2">
+            <a mat-list-item [routerLink]="item.link" routerLinkActive="hl-active">
+                <mat-icon> {{item.icon}} </mat-icon> {{item.scrName}}
+            </a>
+        </mat-nav-list>
+    </ng-container>
 
 </mat-nav-list>

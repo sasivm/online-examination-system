@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { SingUpFormComponent } from './login/sing-up-form/sing-up-form.component';
 
 // MDB Angular Free Modules
-import { MDBBootstrapModule, InputsModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule, InputsModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HomeComponent } from './home/home.component';
 
@@ -39,7 +39,6 @@ import { UploadQuesComponent } from './upload-ques/upload-ques.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot(), InputsModule, ButtonsModule, IconsModule,
     MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule,
     MatListModule
   ],
