@@ -20,6 +20,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 
 // to resize left and right view in test module
 import { ResizableDirective } from './test-portal/resizable.directive'; 
@@ -30,6 +33,7 @@ import { ToolBarComponent } from './home/tool-bar/tool-bar.component';
 import { AccountInfoComponent } from './profile/account-info/account-info.component';
 import { LeftViewComponent } from './test-portal/left-view/left-view.component';
 import { RightViewComponent } from './test-portal/right-view/right-view.component';
+import { TestPortalToolbarComponent } from './test-portal/test-portal-toolbar/test-portal-toolbar.component';
 
 
 @NgModule({
@@ -46,14 +50,15 @@ import { RightViewComponent } from './test-portal/right-view/right-view.componen
     AccountInfoComponent,
     LeftViewComponent,
     RightViewComponent,
-    ResizableDirective
+    ResizableDirective,
+    TestPortalToolbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule,
-    MatListModule
+    MatListModule, MatTabsModule, MatRadioModule, MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,9 @@
-.left, .right, .main {
-    border: 2px solid;
+#test-poratal-container {
+    overflow-y: auto !important;
 }
 
-.left {
-    border: 2px solid;
-    background-color: green;
+// For mobile devices
+@media (max-width: 978px) {
+   
 }
-
-.right {
-    border: 2px solid;
-    background-color: red;
-}
+  

@@ -1,4 +1,24 @@
-.right {
-    border: 2px solid;
-    background-color: red;
+#test-right-view {
+    overflow: auto !important;
+}
+
+#options-container {
+    height: 65vh !important;
+    overflow-y: auto;
+}
+
+#footer-controls {
+    height: 8vh !important;
+}
+
+// For mobile devices
+@media (max-width: 978px) {
+    #options-container {
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
+    #footer-controls {
+        height: auto !important;
+    }
 }

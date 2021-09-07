@@ -1,25 +1,45 @@
-<p>test-portal works!</p>
+<div id="test-poratal-container" class="container-fluid d-flex vh-100 flex-column">
+    <div class="row">
+        <div class="col-12 shadow rounded">
+            <app-test-portal-toolbar></app-test-portal-toolbar>
+        </div>
 
-<div class="main p-5">
-    <div class="d-flex flex-column flex-sm-row">
-        <ng-container *ngIf="isSmallDevice; then mobileTemplate; else desktopTemplate"></ng-container>
+        <div class="col-12">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="First"></mat-tab>
+                <mat-tab label="Second"></mat-tab>
+                <mat-tab label="Third"></mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
 
-        <ng-template #mobileTemplate>
-            <div class="flex-fill p-5 left">
-                <app-left-view></app-left-view>
-            </div>
-            <div class="flex-fill p-5 right">
-                <app-right-view></app-right-view>
-            </div>
-        </ng-template>
+    <div class="row bg-light h-100">
+        <div class="pt-2 w-100 h-100">
+        <!-- above code maked sure below content to be filled the remaining height -->
+            <div class="d-flex flex-column flex-sm-row h-100">
+                <ng-container *ngIf="isSmallDevice; then mobileTemplate; else desktopTemplate"></ng-container>
 
-        <ng-template #desktopTemplate>
-            <div [resizableMinWidth]="10" appResizable class="flex-fill p-5 left">
-                <app-left-view></app-left-view>
+                <ng-template #mobileTemplate>
+                    <div class="flex-fill p-5 left border-bottom">
+                        <app-left-view></app-left-view>
+                    </div>
+                    
+                    <div class="bg-light flex-fill p-5 right">
+                        <app-right-view></app-right-view>
+                    </div>
+                </ng-template>
+
+                <ng-template #desktopTemplate>
+                    <div [resizableMinWidth]="200" appResizable>
+                        <app-left-view></app-left-view>
+                    </div>
+
+                    <div class="flex-fill">
+                        <app-right-view></app-right-view>
+                    </div>
+                </ng-template>
             </div>
-            <div class="flex-fill p-5 right">
-                <app-right-view></app-right-view>
-            </div>
-        </ng-template>
+        </div>
+
     </div>
 </div>

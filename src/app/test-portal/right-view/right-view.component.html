@@ -1,3 +1,43 @@
-<div class="col-auto p-5 right">
-    <p>right-view works!</p>
+<div id="test-right-view">
+    <div id="options-container">
+        <div id="checbox-opt-container">
+            <section *ngFor="let option of optionsList">
+                <mat-checkbox class="p-2">
+                    <!-- (change)="onChange($event)"> -->
+                    {{option}}
+                </mat-checkbox>
+            </section>
+        </div>
+
+        <!-- <div id="radio-opt-container">
+            <mat-radio-group class="d-flex flex-column" aria-label="Select an option">
+                <mat-radio-button class="p-2" *ngFor="let option of optionsList" [value]="option">
+                    {{option}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+            <section *ngFor="let option of optionsList">
+                <mat-checkbox class="p-2">
+                    {{option}}
+                </mat-checkbox>
+            </section>
+        </div> -->
+
+        <div class="m-3">
+            <button mat-raised-button type="button"> Clear </button>
+        </div>
+    </div>
+
+    <div id="footer-controls">
+        <div class="d-flex justify-content-center">
+            <button mat-raised-button color="primary" class="col-2 mx-2" type="button"> Back
+            </button>
+            <button mat-raised-button color="primary" class="col-2 mx-2" type="button"> Next
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex d-sm-none justify-content-center pt-5">
+        <button mat-raised-button class="" type="submit"> Submit Section </button>
+    </div>
 </div>

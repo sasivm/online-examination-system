@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightViewComponent implements OnInit {
 
+  optionsList: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+
   constructor() { }
 
   ngOnInit(): void {
