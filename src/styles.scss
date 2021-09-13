@@ -6,6 +6,11 @@
   line-height: 1.2 !important;
 }
 
+::selection {
+  color: #fff;
+  background: #5333ed;
+}
+
 p {
   @include round-fond();
   font-size: 1rem !important;
@@ -142,6 +147,14 @@ mat-sidenav {
 
 .left-spacer {
   flex: 1 1 auto;
+}
+
+.bold-border {
+  border: 2px solid red;
+}
+
+.mat-tab-header {
+  border-bottom: none !important;
 }
 
 

@@ -3,12 +3,8 @@
 }
 
 #options-container {
-    height: 65vh !important;
+    height: 68vh !important;
     overflow-y: auto;
-}
-
-#footer-controls {
-    height: 8vh !important;
 }
 
 // For mobile devices
@@ -16,9 +12,5 @@
     #options-container {
         height: auto !important;
         overflow-y: auto !important;
-    }
-
-    #footer-controls {
-        height: auto !important;
     }
 }

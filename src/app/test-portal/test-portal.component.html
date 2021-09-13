@@ -15,29 +15,40 @@
 
     <div class="row bg-light h-100">
         <div class="pt-2 w-100 h-100">
-        <!-- above code maked sure below content to be filled the remaining height -->
-            <div class="d-flex flex-column flex-sm-row h-100">
+            <!-- above code maked sure below content to be filled the remaining height -->
+            <div class="d-flex flex-column flex-sm-row h-100 p-1">
                 <ng-container *ngIf="isSmallDevice; then mobileTemplate; else desktopTemplate"></ng-container>
 
                 <ng-template #mobileTemplate>
-                    <div class="flex-fill p-5 left border-bottom">
+                    <div class="px-3 py-2">
                         <app-left-view></app-left-view>
                     </div>
-                    
-                    <div class="bg-light flex-fill p-5 right">
+
+                    <div class="bg-light px-4 pb-5">
                         <app-right-view></app-right-view>
+                    </div>
+
+                    <div id="footer-controls-mobile">
+                        <div class="bg-light d-flex flex-row fixed-bottom justify-content-around py-3 border-top">
+                            <button mat-raised-button color="warn" type="submit"> Submit Section </button>
+                            <button mat-raised-button color="accent" class="col-2 mx-2" type="button"> Back
+                            </button>
+                            <button mat-raised-button color="accent" class="col-2 mx-2" type="button"> Next
+                            </button>
+                        </div>
                     </div>
                 </ng-template>
 
                 <ng-template #desktopTemplate>
-                    <div [resizableMinWidth]="200" appResizable>
+                    <div [resizableMinWidth]="200" id="left-view-container" appResizable class="border">
                         <app-left-view></app-left-view>
                     </div>
 
-                    <div class="flex-fill">
+                    <div class="flex-fill border">
                         <app-right-view></app-right-view>
                     </div>
                 </ng-template>
+
             </div>
         </div>
 

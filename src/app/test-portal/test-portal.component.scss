@@ -2,6 +2,11 @@
     overflow-y: auto !important;
 }
 
+#left-view-container {
+    border-right: 5px solid darkgrey !important;
+    width: 50%;
+}
+
 // For mobile devices
 @media (max-width: 978px) {
    
